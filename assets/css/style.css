@@ -31,3 +31,5 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
 .panel.twocol:has(.heroart-care){min-height:255px}
 .profile-info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px;margin:8px 0 16px}.profile-info p{margin:6px 0;overflow-wrap:anywhere}
 @media(max-width:600px){.hero:has(.heroart-home){grid-template-columns:minmax(0,1fr) minmax(120px,43%)}.heroart-home img{width:165%;max-height:calc(100% + 35px);right:-17px;bottom:-16px}.panel.twocol:has(.heroart-care){min-height:185px}.heroart-care img{width:130%;max-width:none;max-height:180px}.profile-info{grid-template-columns:1fr}}
+
+.product-error{color:#b42318;background:#fff2f0;border:1px solid #f6c7c2;border-radius:8px;padding:10px;overflow-wrap:anywhere}
