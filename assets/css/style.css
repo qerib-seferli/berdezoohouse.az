@@ -249,3 +249,23 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
  .checkout-form .checkout-wide{grid-column:1/-1}
  .checkout-form>.btn{margin-top:5px}
 }
+
+/* BZH 2026-10-29 patch5: partner card bounds and custom select UI */
+@media(min-width:701px){
+.home-feature-grid>.partners-card{height:205px!important;min-height:0!important;max-height:205px!important;overflow:hidden!important;display:flex!important;flex-direction:column!important;box-sizing:border-box!important}
+.partners-card .partners-viewport{flex:1 1 0!important;min-height:0!important;overflow:hidden!important}
+.partners-card .partners-track{height:100%!important;min-height:0!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+.partners-card .partner-slot{height:100%!important;min-height:0!important;max-height:100%!important;aspect-ratio:auto!important;overflow:hidden!important}
+.partners-card .partner-slot img{width:100%!important;height:100%!important;object-fit:contain!important}
+}
+.bzh-select{position:relative;min-width:0;display:inline-block;vertical-align:middle;width:100%}
+.bzh-select .bzh-select-trigger{width:100%;height:100%;min-height:40px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #eed9c7;background:#fffdfb;color:#29231f;border-radius:10px;padding:9px 12px;font:inherit;cursor:pointer}
+.bzh-select .bzh-select-trigger::after{content:'⌄';color:#f66b00;font-size:20px;line-height:12px}
+.bzh-select .bzh-select-trigger:focus-visible{outline:2px solid #ff6900;outline-offset:2px}
+.bzh-select .bzh-select-options{position:absolute;z-index:9999;top:calc(100% + 4px);left:0;right:0;max-height:min(300px,45vh);overflow:auto;background:white;border:1px solid #f0d9c5;border-radius:12px;padding:5px;box-shadow:0 12px 32px #3d230d24}
+.bzh-select .bzh-select-options[hidden]{display:none!important}
+.bzh-select .bzh-select-option{display:block;width:100%;border:0;border-radius:8px;padding:10px;text-align:left;background:transparent;color:#29231f;font:inherit;cursor:pointer}
+.bzh-select .bzh-select-option:hover,.bzh-select .bzh-select-option:focus-visible,.bzh-select .bzh-select-option[aria-selected=true]{background:#fff0e2;color:#db5700}
+.bzh-select .bzh-select-option:disabled{opacity:.45;cursor:not-allowed}
+.bzh-select select{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;left:0!important;top:0!important}
+@media(max-width:700px){.bzh-select .bzh-select-options{max-height:260px}.bzh-select .bzh-select-option{padding:12px 10px}}
