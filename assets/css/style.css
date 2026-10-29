@@ -84,17 +84,21 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
 
 /* RƏSİMLƏR — Kompüter üçün */
 @media (min-width: 701px) {
-  .hero:has(.heroart-home),
+
+  .hero:has(.heroart-home) {
+    overflow: hidden !important;
+  }
+
   .heroart-home {
     overflow: visible !important;
   }
 
   .heroart-home img {
-    width: 145% !important;
-    max-height: none !important;
+    width: 115% !important;
+    max-height: 118% !important;
     height: auto !important;
     right: -10px !important;
-    bottom: -28px !important;
+    bottom: -5px !important;
   }
 }
 
