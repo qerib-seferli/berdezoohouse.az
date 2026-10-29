@@ -94,7 +94,7 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
   }
 
   .heroart-home img {
-    width: 115% !important;
+    width: 175% !important;
     max-height: 118% !important;
     height: auto !important;
     right: -10px !important;
