@@ -100,13 +100,13 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
   .heroart-home img {
     position: absolute !important;
 
-    width: 420px !important;
+    width: 390px !important;
     max-width: none !important;
     max-height: none !important;
     height: auto !important;
 
     right: 0px !important;
-    bottom: -16px !important;
+    bottom: -22px !important;
   }
 }
 
