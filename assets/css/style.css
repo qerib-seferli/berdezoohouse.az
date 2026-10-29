@@ -269,3 +269,14 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
 .bzh-select .bzh-select-option:disabled{opacity:.45;cursor:not-allowed}
 .bzh-select select{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;left:0!important;top:0!important}
 @media(max-width:700px){.bzh-select .bzh-select-options{max-height:260px}.bzh-select .bzh-select-option{padding:12px 10px}}
+
+/* Targeted Bərdə ZOO House UI refinements */
+.sectionhead h2{font-size:19px!important;line-height:1.25}.partners-card h2{font-size:15px!important}
+#content h1{font-size:clamp(21px,2.5vw,27px)}#content h2{font-size:clamp(17px,2vw,21px)}
+@media(min-width:701px){.partners-card .partners-track{grid-template-rows:repeat(2,minmax(0,1fr))!important}.partners-card .partner-slot img{max-width:100%;max-height:100%;object-fit:contain!important;display:block}.partners-card .partners-viewport{overflow:hidden!important}}
+.bzh-file-input{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;overflow:hidden!important}
+.bzh-file-label{display:flex;align-items:center;gap:12px;min-height:44px;border:1px dashed #f4aa78;border-radius:11px;padding:10px 14px;background:#fff8f1;color:#db5700;cursor:pointer;font-weight:800;width:100%}
+.bzh-file-label span{color:#85766c;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bzh-file-input:focus-visible+.bzh-file-label{outline:2px solid #ff6900;outline-offset:2px}
+.bzh-select .bzh-select-trigger{font-size:14px;white-space:nowrap;overflow:hidden}.bzh-select .bzh-select-options{max-height:min(240px,40dvh);overscroll-behavior:contain}
+@media(max-width:700px){.filters{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:8px!important}.filters .bzh-select{width:100%!important;min-width:0!important}.filters #bzh-cat-wrap{grid-column:1!important;grid-row:1!important}.filters .discount-filter{grid-column:1/-1!important;grid-row:2!important}.filters .bzh-select:has(#sortProducts){grid-column:2!important;grid-row:1!important}.filters #catFilter,.filters #sortProducts{width:100%!important}.bzh-select .bzh-select-trigger{font-size:13px!important;padding:8px!important}.bzh-select .bzh-select-option{font-size:13px!important;padding:9px!important}.sectionhead h2{font-size:17px!important}}
