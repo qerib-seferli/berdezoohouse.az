@@ -66,7 +66,7 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
  /*.hero:has(.heroart-home){min-height:224px!important;padding:15px!important}*/
  .hero:has(.heroart-home){
    min-height:0!important;
-   height:205px!important;
+   height:190px!important;
    padding:15px!important;
    overflow:hidden;
  }
