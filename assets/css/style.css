@@ -82,7 +82,7 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
     width: 135% !important;
     max-height: 135% !important;
     right: -10px !important;
-    bottom: -8px !important;
+    bottom: -18px !important;
   }
 }
 
@@ -92,6 +92,6 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
     width: 75% !important;
     max-height: 100% !important;
     right: -3% !important;
-    bottom: 8px !important;
+    bottom: 16px !important;
   }
 }
