@@ -457,3 +457,23 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
     min-height:0!important;
   }
 }
+
+/* Product detail layout and image viewer: scoped overrides only. */
+.detail-left .detail-photo{cursor:zoom-in!important;}
+.detail-left .detail-photo>img{object-fit:contain!important;object-position:center!important;width:100%!important;height:100%!important;max-height:100%!important;}
+.detail-left .detail-photo:focus-visible{outline:3px solid #ff6900;outline-offset:3px}
+@media(min-width:1050px){
+ .detail-layout{grid-template-columns:minmax(0, 440px) minmax(0,1fr)!important;gap:16px!important}
+ .detail-related-grid,.detail-related-grid:has(> .product:nth-child(4)){grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important}
+ .detail-left .detail-photo{height:clamp(290px,46dvh,440px)!important;aspect-ratio:auto!important}
+}
+@media(min-width:701px) and (max-width:1049px){.detail-related-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:700px){.detail-related-grid,.detail-related-grid:has(> .product:nth-child(3)){grid-template-columns:repeat(2,minmax(0,1fr))!important}.detail-left .detail-photo{aspect-ratio:1/1!important;height:auto!important}}
+body.bzh-zoom-open{overflow:hidden!important}
+.bzh-product-zoom{position:fixed;inset:0;z-index:99999;background:rgba(15,15,18,.9);display:flex;align-items:center;justify-content:center;padding:18px;box-sizing:border-box}
+.bzh-product-zoom-panel{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;width:min(900px,100%);max-height:calc(100dvh - 36px);overflow:auto;background:#fff;border-radius:16px;padding:20px;box-sizing:border-box}
+.bzh-product-zoom-panel h2{margin:0;padding:0 45px 0 0;align-self:stretch;font-size:clamp(16px,2vw,22px);line-height:1.4}
+.bzh-product-zoom-panel img{display:block;width:100%;max-height:65dvh;object-fit:contain;min-height:0}
+.bzh-product-zoom-panel p{align-self:stretch;margin:0;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.bzh-product-zoom-close{position:absolute;top:10px;right:10px;width:38px;height:38px;border:0;border-radius:50%;background:#f2f2f2;color:#222;font-size:30px;line-height:1;cursor:pointer;z-index:2}
+@media(max-width:700px){.bzh-product-zoom{padding:8px}.bzh-product-zoom-panel{padding:15px;max-height:calc(100dvh - 16px)}.bzh-product-zoom-panel img{max-height:60dvh}}
