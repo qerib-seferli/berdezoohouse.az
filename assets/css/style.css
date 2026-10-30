@@ -416,3 +416,44 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
  .detail-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 @media (prefers-reduced-motion:reduce){.partners-section .partner-slot:hover::after{animation:none!important}}
+
+/* 2026-10-31: Match the brand card's outer top and bottom edges to the care card.
+   The heading remains above the card without consuming its grid height. */
+@media (min-width:701px){
+  .home-feature-grid > .partners-section{
+    height:205px!important;
+    min-height:0!important;
+    max-height:205px!important;
+    align-self:start!important;
+    display:block!important;
+    position:relative!important;
+    padding:0!important;
+    margin:0!important;
+  }
+  .home-feature-grid > .partners-section > .partners-heading{
+    position:absolute!important;
+    top:-34px!important;
+    left:2px!important;
+    margin:0!important;
+  }
+  .home-feature-grid > .partners-section > .partners-card{
+    height:205px!important;
+    min-height:205px!important;
+    max-height:205px!important;
+    width:100%!important;
+    margin:0!important;
+    padding:14px!important;
+    display:flex!important;
+    align-items:stretch!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+  }
+  .home-feature-grid > .partners-section .partners-viewport{
+    height:100%!important;
+    min-height:0!important;
+  }
+  .home-feature-grid > .partners-section .partners-track{
+    height:100%!important;
+    min-height:0!important;
+  }
+}
