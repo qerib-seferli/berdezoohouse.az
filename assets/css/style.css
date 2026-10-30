@@ -359,3 +359,32 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
 }
 /* No image cropping: retain full packaging while using the entire available image stage. */
 .detail-left .detail-photo>img,.detail-related-grid .photo img{object-fit:contain!important;object-position:center!important}
+
+/* 2026-10-31 targeted visual repair: brands and product detail only. */
+@media (min-width:701px){
+ .home-feature-grid>.partners-section{transform:none!important;align-self:stretch!important}
+ .home-feature-grid>.partners-section .partners-card{margin:0!important;min-height:0!important}
+ .partners-section .partner-slot{position:relative;isolation:isolate;overflow:hidden!important}
+ .partners-section .partner-slot::after{content:"";position:absolute;top:-35%;bottom:-35%;left:-85%;width:55%;transform:skewX(-24deg) translateX(0);background:linear-gradient(90deg,transparent,rgba(255,255,255,.08) 12%,rgba(255,255,255,.68) 50%,rgba(255,255,255,.08) 88%,transparent);opacity:0;pointer-events:none;z-index:3}
+ .partners-section .partner-slot:hover::after{animation:bzh-brand-glass-sweep 1.15s ease-in-out 1 both;opacity:1}
+ .detail-layout{grid-template-columns:minmax(0,.78fr) minmax(0,1.62fr)!important;gap:14px!important}
+ .detail-right{padding-right:2px!important;scrollbar-gutter:auto!important}
+ .detail-related-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important}
+ .detail-related-grid .photo{height:clamp(125px,11vw,165px)!important}
+ .detail-related-grid .product .details{padding:9px!important;min-height:118px!important}
+ .detail-related-grid .product h3{font-size:12px!important;line-height:1.35!important}
+ .detail-related-grid .price{font-size:15px!important}
+ .detail-related-grid .circleadd{width:30px!important;height:30px!important}
+ .detail-left .detail-photo{height:clamp(270px,46dvh,430px)!important}
+}
+@keyframes bzh-brand-glass-sweep{0%{left:-85%;opacity:0}8%{opacity:1}90%{opacity:1}100%{left:140%;opacity:0}}
+@media (min-width:701px) and (max-width:1050px){
+ .detail-layout{grid-template-columns:minmax(0,.82fr) minmax(0,1.45fr)!important}
+ .detail-related-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media (max-width:700px){
+ .partners-section .partners-track{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;grid-template-columns:none!important;grid-template-rows:none!important;gap:10px!important}
+ .partners-section .partner-slot{flex:0 0 155px!important;width:155px!important;min-width:155px!important;aspect-ratio:2/1!important}
+ .detail-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media (prefers-reduced-motion:reduce){.partners-section .partner-slot:hover::after{animation:none!important;opacity:0!important}}
