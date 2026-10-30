@@ -388,3 +388,31 @@ html,body{min-height:100%}body{min-height:100dvh;display:flex;flex-direction:col
  .detail-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 @media (prefers-reduced-motion:reduce){.partners-section .partner-slot:hover::after{animation:none!important;opacity:0!important}}
+
+/* 2026-10-31: fix sparse related-product grids without shrinking the cards.
+   Keep four columns when there are at least four products; otherwise use
+   up to three sensible card widths. No application logic is changed. */
+@media (min-width:1051px){
+ .detail-layout{grid-template-columns:minmax(0,500px) minmax(0,1fr)!important;gap:16px!important;width:100%!important}
+ .detail-right{width:100%!important;min-width:0!important}
+ .detail-related-grid{width:100%!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:11px!important;align-content:start!important}
+ .detail-related-grid:has(> .product:nth-child(4)){grid-template-columns:repeat(4,minmax(0,1fr))!important}
+ .detail-related-grid .product .photo{height:155px!important}
+ .detail-related-grid .product .details{min-height:125px!important}
+}
+@media (min-width:701px) and (max-width:1050px){
+ .detail-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .detail-related-grid:has(> .product:nth-child(3)){grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+/* Product photos preserve the original image, with a subtle fill behind it. */
+.detail-left .detail-photo,.detail-related-grid .photo{background-color:#f8f7f5!important}
+.detail-left .detail-photo>img,.detail-related-grid .photo img{object-fit:contain!important;object-position:center!important}
+/* Continuous left-to-right moving glass highlight while hovering a brand. */
+@media (hover:hover) and (pointer:fine) and (min-width:701px){
+ .partners-section .partner-slot:hover::after{animation:bzh-brand-glass-sweep 1.35s linear infinite!important}
+ .partners-section .partner-slot:not(:hover)::after{animation:none!important;opacity:0!important}
+}
+@media (max-width:700px){
+ .detail-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media (prefers-reduced-motion:reduce){.partners-section .partner-slot:hover::after{animation:none!important}}
