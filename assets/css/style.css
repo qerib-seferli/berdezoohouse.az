@@ -539,3 +539,18 @@ body.bzh-zoom-open{overflow:hidden!important}
  .detail-related-grid .product .heart{top:8px!important;right:8px!important;width:30px!important;height:30px!important;min-width:30px!important;min-height:30px!important;font-size:20px!important;}
  .detail-related-grid .product .details{padding-left:11px!important;padding-right:9px!important;}
 }
+
+/* PWA-only bird on the lower-left edge of the homepage hero.
+   Adjust --bird-x (right/left), --bird-y (down/up), --bird-size (scale). */
+.home-mobile-bird{display:none!important;}
+@media(max-width:700px){
+  .hero:has(.heroart-home){position:relative!important;overflow:visible!important;}
+  .hero:has(.heroart-home) .home-mobile-bird{
+    --bird-x:-25px; --bird-y:66px; --bird-size:125px;
+    display:block!important;position:absolute!important;
+    width:var(--bird-size)!important;height:auto!important;max-width:none!important;
+    left:var(--bird-x)!important;bottom:calc(-1 * var(--bird-y))!important;
+    z-index:5!important;pointer-events:none!important;user-select:none!important;
+    filter:drop-shadow(0 2px 2px rgba(0,0,0,.13));
+  }
+}
