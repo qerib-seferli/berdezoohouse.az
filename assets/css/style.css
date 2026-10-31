@@ -559,7 +559,7 @@ body.bzh-zoom-open{overflow:hidden!important}
 @media(max-width:700px){
  .hero:has(.heroart-home) .hero-copy > .btn{display:none!important;}
  .hero:has(.heroart-home) .home-mobile-bird{
-  --bird-x:-90px; --bird-y:-157px; --bird-size:220px;            /*bird-x artdıqca sağa, bird-y artdıqca aşağı hərəkət edir. bird-size böyüdükcə quş böyüyür. Bunlar yalnız PWA görünüşünə aiddir.*/
+  --bird-x:-90px; --bird-y:-57px; --bird-size:220px;            /*bird-x artdıqca sağa, bird-y artdıqca aşağı hərəkət edir. bird-size böyüdükcə quş böyüyür. Bunlar yalnız PWA görünüşünə aiddir.*/
   animation:none!important;transform:none!important;will-change:auto!important;
  }
 }
