@@ -555,21 +555,11 @@ body.bzh-zoom-open{overflow:hidden!important}
   }
 }
 
-/* 2026-10-31: Homepage mobile bird only. Hide hero CTA without affecting layout;
-   animate the supplied single-frame GIF with a subtle CSS sway. */
+/* PWA hero bird: original animated sticker, without artificial CSS motion. */
 @media(max-width:700px){
-  .hero:has(.heroart-home) .hero-copy > .btn{display:none!important;}
-  .hero:has(.heroart-home) .home-mobile-bird{
-    --bird-x:-27px; --bird-y:78px; --bird-size:165px;
-    transform-origin:50% 25%;
-    animation:bzh-bird-sway 2.8s ease-in-out infinite alternate!important;
-    will-change:transform;
-  }
-}
-@keyframes bzh-bird-sway{
-  from{transform:translateY(0) rotate(-2deg)}
-  to{transform:translateY(-8px) rotate(2deg)}
-}
-@media(prefers-reduced-motion:reduce){
-  .hero:has(.heroart-home) .home-mobile-bird{animation:none!important;will-change:auto}
+ .hero:has(.heroart-home) .hero-copy > .btn{display:none!important;}
+ .hero:has(.heroart-home) .home-mobile-bird{
+  --bird-x:-27px; --bird-y:78px; --bird-size:165px;
+  animation:none!important;transform:none!important;will-change:auto!important;
+ }
 }
