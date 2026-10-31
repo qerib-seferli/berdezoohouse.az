@@ -183,8 +183,12 @@ document.addEventListener('click',e=>{const btn=e.target.closest('.detail-desc-t
 
 /* Product detail: swap only selected and previous product, without re-rendering all cards. */
 document.addEventListener('click',e=>{
- const link=e.target.closest('.detail-related-grid .product > a[href^="#product?id="]');
- if(!link||currentPage!=='product'||e.defaultPrevented)return;
+ const cardHit=e.target.closest('.detail-related-grid .product');
+ if(!cardHit||currentPage!=='product'||e.defaultPrevented)return;
+ // Favourite and cart buttons retain their own actions; clicking any other part opens the product.
+ if(e.target.closest('button,[data-act],input,select,textarea'))return;
+ const link=cardHit.querySelector(':scope > a[href^="#product?id="]');
+ if(!link)return;
  const target=new URLSearchParams(link.hash.split('?')[1]||'').get('id');
  const current=new URLSearchParams(location.hash.split('?')[1]||'').get('id');
  if(!target||!current||target===current)return;

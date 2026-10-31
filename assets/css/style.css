@@ -683,3 +683,21 @@ body.bzh-zoom-open{overflow:hidden!important}
  .bzh-product-zoom-panel .bzh-product-zoom-info{width:100%!important;max-height:none!important;overflow:visible!important;}
  .bzh-product-zoom-panel .bzh-product-zoom-close{position:sticky!important;top:0!important;align-self:flex-end!important;margin-top:-45px!important;margin-bottom:0!important;flex-shrink:0!important;}
 }
+
+
+/* 2026-10-31 — Detail page targeted finishing fixes. */
+.detail-related-grid .product{cursor:pointer!important;}
+.detail-related-grid .product button{cursor:pointer!important;}
+/* Keep the image's bottom corners rounded independently of the title strip. */
+.detail-left .detail-photo{border-radius:16px!important;overflow:hidden!important;}
+.detail-left .detail-photo>img{border-radius:14px!important;clip-path:inset(0 round 14px)!important;}
+.bzh-product-zoom-panel>img{border-radius:14px!important;clip-path:inset(0 round 14px)!important;}
+@media(max-width:700px){
+ /* Explicit placement overrides the older global two-row price grid. */
+ .detail-related-grid .product .productfoot{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-rows:auto auto!important;column-gap:6px!important;row-gap:1px!important;align-items:center!important;}
+ .detail-related-grid .product .productfoot .price{grid-column:1!important;grid-row:2!important;justify-self:start!important;align-self:center!important;}
+ .detail-related-grid .product .productfoot .old-price{grid-column:1!important;grid-row:1!important;justify-self:start!important;align-self:end!important;margin:0!important;font-size:11px!important;}
+ .detail-related-grid .product .productfoot .circleadd{grid-column:2!important;grid-row:1 / span 2!important;justify-self:end!important;align-self:center!important;margin:0!important;}
+ .detail-left .detail-photo{border-radius:16px!important;}
+ .bzh-product-zoom-panel>img{border-radius:14px!important;}
+}
