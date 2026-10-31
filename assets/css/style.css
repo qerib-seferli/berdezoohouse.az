@@ -563,3 +563,13 @@ body.bzh-zoom-open{overflow:hidden!important}
   animation:none!important;transform:none!important;will-change:auto!important;
  }
 }
+
+/* 2026-10-31: PWA hero heading clearance and centered mobile search placeholder. */
+@media (max-width:700px){
+  .hero:has(.heroart-home) .hero-copy h1{
+    position:relative!important;left:18px!important;
+  }
+  #appSearchMobile{text-align:center!important;text-align-last:center!important;}
+  #appSearchMobile::placeholder{text-align:center!important;}
+  #appSearchMobile:not(:placeholder-shown){text-align:left!important;}
+}
