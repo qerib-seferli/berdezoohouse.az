@@ -168,7 +168,7 @@ window.addEventListener('pagehide',()=>{if(bzhCameraStream)bzhCameraStream.getTr
   const heading=document.createElement('h2');heading.textContent=p.name||'Məhsul';
   const closeBtn=document.createElement('button');closeBtn.type='button';closeBtn.className='bzh-product-zoom-close';closeBtn.textContent='×';closeBtn.setAttribute('aria-label','Bağla');closeBtn.addEventListener('click',close);
   const img=document.createElement('img');img.src=p.image_url||'assets/images/brand-logo.png';img.alt=p.name||'Məhsul';
-  const info=document.createElement('div');info.className='bzh-product-zoom-info';const desc=document.createElement('p');desc.textContent=p.description||'Məhsul haqqında əlavə açıqlama yoxdur.';const price=document.createElement('strong');price.className='price';price.textContent=money(p.price);const stock=document.createElement('p');stock.textContent=p.stock>0?'🟢 Stokda var':'🔴 Bitib';info.append(heading,price,stock,desc);panel.append(closeBtn,img,info);viewer.append(panel);document.body.append(viewer);document.body.classList.add('bzh-zoom-open');
+  heading.className='bzh-product-zoom-title';panel.append(closeBtn,img,heading);viewer.append(panel);document.body.append(viewer);document.body.classList.add('bzh-zoom-open');
   viewer.addEventListener('click',e=>{if(e.target===viewer)close()});
   history.pushState({...history.state,bzhProductZoom:true},'',location.href);pushed=true;closeBtn.focus();
  }
