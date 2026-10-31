@@ -520,3 +520,22 @@ body.bzh-zoom-open{overflow:hidden!important}
     margin:0!important;flex:none!important;
   }
 }
+
+/* 2026-10-31: Product detail related cards only — visible favourite control and inset prices. */
+.detail-related-grid .product{position:relative!important;}
+.detail-related-grid .product .heart{
+  position:absolute!important;top:9px!important;right:9px!important;left:auto!important;
+  width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;
+  display:grid!important;place-items:center!important;
+  padding:0!important;margin:0!important;line-height:1!important;
+  font-size:21px!important;color:#ff6900!important;background:#fff!important;
+  border:1px solid #e9e9e9!important;border-radius:50%!important;
+  box-shadow:0 2px 8px rgba(0,0,0,.12)!important;z-index:10!important;
+  visibility:visible!important;opacity:1!important;transform:none!important;
+}
+.detail-related-grid .product .details{padding-left:12px!important;padding-right:10px!important;box-sizing:border-box!important;}
+.detail-related-grid .product .productfoot{padding-left:2px!important;min-width:0!important;}
+@media(max-width:700px){
+ .detail-related-grid .product .heart{top:8px!important;right:8px!important;width:30px!important;height:30px!important;min-width:30px!important;min-height:30px!important;font-size:20px!important;}
+ .detail-related-grid .product .details{padding-left:11px!important;padding-right:9px!important;}
+}
