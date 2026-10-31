@@ -194,7 +194,6 @@ document.addEventListener('click',e=>{
  const previous=products.find(p=>String(p.id)===String(current));
  if(!next||!previous)return;
  e.preventDefault();
- const savedScroll=window.scrollY;
  const temp=document.createElement('div');
  history.replaceState(history.state,'','#product?id='+encodeURIComponent(target));
  temp.innerHTML=detail();
@@ -202,6 +201,6 @@ document.addEventListener('click',e=>{
  const oldCard=document.createElement('div');oldCard.innerHTML=productCard(previous);
  if(nextLeft&&oldCard.firstElementChild){
   left.replaceWith(nextLeft);card.replaceWith(oldCard.firstElementChild);
-  window.scrollTo(0,savedScroll);
+  window.scrollTo({top:0,behavior:"instant"});
  }
 },true);
