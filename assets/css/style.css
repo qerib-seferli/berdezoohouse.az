@@ -559,7 +559,7 @@ body.bzh-zoom-open{overflow:hidden!important}
 @media(max-width:700px){
  .hero:has(.heroart-home) .hero-copy > .btn{display:none!important;}
  .hero:has(.heroart-home) .home-mobile-bird{
-  --bird-x:-17px; --bird-y:58px; --bird-size:265px;
+  --bird-x:-2px; --bird-y:15px; --bird-size:200px;
   animation:none!important;transform:none!important;will-change:auto!important;
  }
 }
