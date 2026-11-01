@@ -1052,3 +1052,12 @@ body.bzh-zoom-open{overflow:hidden!important}
  .bzh-profile .bzh-profile-action{font-size:7px!important;letter-spacing:-.5px!important;padding:8px 1px!important;gap:2px!important}
  .bzh-profile .bzh-profile-action img{width:12px!important;height:12px!important;flex-basis:12px!important}
 }
+
+/* 2026-11-02: Account access navigation on login/register/password reset. */
+.bzh-auth-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:18px;width:100%}
+.bzh-auth-link{display:flex;align-items:center;justify-content:center;gap:7px;min-width:0;min-height:42px;padding:8px 6px;border:1px solid #ffd8ba;border-radius:11px;background:#fff;color:#c95500;text-decoration:none;font-weight:750;font-size:12px;line-height:1.2;box-sizing:border-box;white-space:nowrap}
+.bzh-auth-link img{width:21px;height:21px;object-fit:contain;flex:0 0 21px}
+.bzh-auth-link.is-active{border-color:#ff7200;background:#fff3e8;color:#d65700}
+.bzh-auth-link:hover{border-color:#ff7200;background:#fff7ef}
+@media(max-width:480px){.bzh-auth-links{gap:5px}.bzh-auth-link{gap:4px;padding:8px 3px;font-size:clamp(9px,2.55vw,12px)}.bzh-auth-link img{width:17px;height:17px;flex-basis:17px}}
+@media(max-width:350px){.bzh-auth-link{font-size:9px;gap:2px}.bzh-auth-link img{width:14px;height:14px;flex-basis:14px}}
