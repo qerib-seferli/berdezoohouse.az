@@ -797,3 +797,6 @@ body.bzh-zoom-open{overflow:hidden!important}
 /* Cancellation window: visible, server-enforced status lock */
 .bzh-countdown{color:#cf202b!important;font-weight:800!important}
 .bzh-status-control select:disabled{opacity:.65;cursor:not-allowed!important}
+
+/* Admin care bookings: customer name above phone */
+.bzh-booking-customer{font-weight:650;margin-bottom:4px;white-space:normal}
