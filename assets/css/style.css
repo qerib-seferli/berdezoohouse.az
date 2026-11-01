@@ -912,3 +912,95 @@ body.bzh-zoom-open{overflow:hidden!important}
  #adminBody .bzh-admin-orders-table .order-details{max-width:170px}
  #adminBody .bzh-admin-orders-table .order-details summary{white-space:nowrap;font-size:11px}
 }
+
+
+/* PWA admin order details: show expanded details in a readable mobile sheet,
+   independent of the wide horizontally-scrollable orders table. */
+@media (max-width:700px){
+  #adminBody .bzh-admin-orders-table .order-details[open] > .order-detail-content{
+    position:fixed!important;
+    z-index:10020!important;
+    top:calc(env(safe-area-inset-top, 0px) + 70px)!important;
+    left:12px!important;
+    right:12px!important;
+    bottom:calc(env(safe-area-inset-bottom, 0px) + 88px)!important;
+    width:auto!important;
+    max-width:none!important;
+    box-sizing:border-box!important;
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+    overscroll-behavior:contain;
+    padding:56px 15px 22px!important;
+    background:#fff!important;
+    color:#263342!important;
+    border:1px solid #f0d8c7;
+    border-radius:17px;
+    box-shadow:0 0 0 100vmax rgba(20,24,30,.58),0 10px 36px rgba(0,0,0,.18);
+    text-align:left!important;
+    white-space:normal!important;
+  }
+  #adminBody .bzh-admin-orders-table .order-details[open] > summary{
+    position:fixed!important;
+    z-index:10021!important;
+    top:calc(env(safe-area-inset-top, 0px) + 85px)!important;
+    right:27px!important;
+    left:auto!important;
+    display:flex!important;
+    align-items:center;
+    justify-content:center;
+    width:76px!important;
+    height:33px!important;
+    box-sizing:border-box;
+    border-radius:9px;
+    background:#fff0e4;
+    color:#c95a00!important;
+    font-size:0!important;
+    padding:0!important;
+    list-style:none;
+    cursor:pointer;
+  }
+  #adminBody .bzh-admin-orders-table .order-details[open] > summary::-webkit-details-marker{display:none}
+  #adminBody .bzh-admin-orders-table .order-details[open] > summary::after{
+    content:'✕ Bağla';font-size:13px;font-weight:700;
+  }
+  #adminBody .bzh-admin-orders-table .order-detail-content .order-line{
+    display:grid!important;
+    grid-template-columns:60px minmax(0,1fr)!important;
+    gap:10px!important;
+    align-items:center!important;
+    padding:11px 0!important;
+    min-width:0!important;
+    white-space:normal!important;
+  }
+  #adminBody .bzh-admin-orders-table .order-detail-content .order-line img,
+  #adminBody .bzh-admin-orders-table .order-detail-content .order-noimage{
+    grid-column:1;grid-row:1 / span 2;
+    width:60px!important;height:60px!important;
+    object-fit:contain;
+  }
+  #adminBody .bzh-admin-orders-table .order-detail-content .order-line > div{
+    grid-column:2;min-width:0!important;
+    font-size:13px!important;
+    line-height:1.45;
+    overflow-wrap:anywhere;
+  }
+  #adminBody .bzh-admin-orders-table .order-detail-content .order-line > b{
+    grid-column:2;justify-self:start;
+    font-size:13px!important;
+    white-space:nowrap!important;
+  }
+  #adminBody .bzh-admin-orders-table .order-detail-content .order-totals,
+  #adminBody .bzh-admin-orders-table .order-detail-content .order-customer{
+    width:100%!important;max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box;
+    white-space:normal!important;
+    overflow-wrap:anywhere;
+    font-size:13px!important;
+    line-height:1.5;
+  }
+  #adminBody .bzh-admin-orders-table .order-detail-content .order-totals p{
+    display:flex;justify-content:space-between;align-items:baseline;
+  }
+  #adminBody .bzh-admin-orders-table .order-detail-content .btn{max-width:100%}
+}
