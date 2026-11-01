@@ -753,3 +753,12 @@ body.bzh-zoom-open{overflow:hidden!important}
  .grooming-panel .booking-fields{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
  .grooming-panel .booking-fields .field label{display:block!important}
 }
+
+/* 2026-11-01: Grooming banner only — shorter on desktop and PWA. */
+.hero:has(.grooming-hero-art){height:154px!important;min-height:154px!important;padding:12px 24px!important;}
+.hero:has(.grooming-hero-art) .grooming-hero-art img{height:178px!important;transform:translateY(-10px)!important;}
+@media(max-width:700px){
+ .hero:has(.grooming-hero-art){height:148px!important;min-height:148px!important;padding:12px 15px!important;}
+ .hero:has(.grooming-hero-art) .grooming-hero-art img{height:153px!important;transform:translateY(-7px)!important;}
+ .hero:has(.grooming-hero-art) h1{font-size:clamp(19px,4.8vw,25px)!important;line-height:1.16!important;}
+}
