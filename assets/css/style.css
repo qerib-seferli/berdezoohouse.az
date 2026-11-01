@@ -762,3 +762,34 @@ body.bzh-zoom-open{overflow:hidden!important}
  .hero:has(.grooming-hero-art) .grooming-hero-art img{height:153px!important;transform:translateY(-7px)!important;}
  .hero:has(.grooming-hero-art) h1{font-size:clamp(19px,4.8vw,25px)!important;line-height:1.16!important;}
 }
+
+/* 2026-11-01: Scoped admin dashboard / statuses / countdown */
+.bzh-overview-card{display:block;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;border:1px solid #f0e2d5;transition:border-color .15s,box-shadow .15s}
+.bzh-overview-card:hover,.bzh-overview-card:focus-visible{border-color:#ff7900;box-shadow:0 5px 18px #ff79001c}
+.adminnav button{display:inline-flex;align-items:center;gap:7px}
+.bzh-new-badge{background:#086e48;color:#fff;font-size:11px;font-weight:800;border-radius:20px;padding:3px 7px;white-space:nowrap}
+.bzh-admin-row{background:#fff!important;color:#24342e!important}
+.bzh-admin-row.pending{background:#fffdf5!important;color:#775b12!important}
+.bzh-admin-row.confirmed{background:#f1f6ff!important;color:#214f8a!important}
+.bzh-admin-row.completed{background:#f0fbf5!important;color:#116a46!important}
+.bzh-admin-row.cancelled{background:#fff5f5!important;color:#a12d36!important}
+.bzh-admin-row td{color:inherit!important}
+.bzh-admin-row .order-details summary{color:inherit}
+.bzh-status-control{display:block;position:relative;min-width:166px;max-width:185px;border-radius:11px;background:#fff;border:1px solid #e4e4e4;overflow:visible}
+.bzh-status-control select{display:block;width:100%;max-width:none!important;min-height:40px;border:0!important;border-radius:10px!important;background:transparent!important;color:inherit!important;font-weight:750;padding:8px 24px 8px 11px;cursor:pointer;position:relative;z-index:2}
+.bzh-status-control select option{background:#fff!important;color:#172b25!important}
+.bzh-status-control.pending{background:#fff0c7;color:#78520c;border-color:#ebc76e}
+.bzh-status-control.confirmed{background:#dceaff;color:#214f8a;border-color:#aac6ed}
+.bzh-status-control.completed{background:#d9f7e8;color:#116a46;border-color:#9edabb}
+.bzh-status-control.cancelled{background:#ffe1e3;color:#9b2734;border-color:#eeb3b8}
+.bzh-admin-timer,.bzh-countdown{display:inline-block;font-size:11px;font-weight:700;color:#776454;margin-top:6px}
+.bzh-admin-timer{display:block}
+.bzh-cancel-btn{margin:8px 0 0 9px}
+.bzh-cancel-btn:disabled{opacity:.5;cursor:not-allowed}
+/* Native select menus must not be clipped by sticky table headers or wrappers. */
+#adminBody .tablewrap{overflow-x:auto;overflow-y:visible}
+#adminBody table th{position:static!important;z-index:auto!important}
+#adminBody .order-line img{display:block;width:64px;height:64px;object-fit:contain;background:#fff;border:1px solid #eee}
+@media(max-width:700px){.bzh-status-control{min-width:145px}.bzh-overview-card{padding:12px}.bzh-new-badge{font-size:10px}}
+
+#adminBody .bzh-status-control select{appearance:auto!important;-webkit-appearance:menulist!important;background:transparent!important;color:inherit!important}
