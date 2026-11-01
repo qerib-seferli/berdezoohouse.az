@@ -736,3 +736,20 @@ body.bzh-zoom-open{overflow:hidden!important}
  .bzh-product-zoom-panel>img{height:auto!important;max-height:65dvh!important;border-radius:20px!important;clip-path:inset(0 round 20px)!important;}
  .bzh-product-zoom-panel>.bzh-product-zoom-title{font-size:17px!important;}
 }
+
+/* 2026-11-01: Only Kompleks baxim banner and reservation layout. */
+.hero:has(.grooming-hero-art){min-height:190px!important;height:190px!important;padding:20px 25px!important;grid-template-columns:minmax(0,1fr) minmax(190px,38%)!important;align-items:center!important;overflow:hidden!important}
+.hero:has(.grooming-hero-art) h1{font-size:clamp(23px,2.7vw,32px)!important;margin-bottom:8px!important}
+.hero:has(.grooming-hero-art) p{margin:0!important;line-height:1.45!important}
+.hero:has(.grooming-hero-art) .grooming-hero-art{height:100%!important;align-self:stretch!important;display:flex!important;align-items:flex-start!important;justify-content:center!important;filter:none!important}
+.hero:has(.grooming-hero-art) .grooming-hero-art img{height:205px!important;max-height:none!important;width:auto!important;max-width:100%!important;object-fit:contain!important;object-position:center top!important;transform:translateY(-13px)!important}
+.grooming-panel .booking-fields .field{min-width:0!important}
+.grooming-panel .booking-fields input,.grooming-panel .booking-fields select{width:100%!important;min-width:0!important}
+@media(max-width:700px){
+ .hero:has(.grooming-hero-art){height:175px!important;min-height:175px!important;padding:18px 16px!important;grid-template-columns:minmax(0,1fr) 34%!important;gap:6px!important}
+ .hero:has(.grooming-hero-art) h1{font-size:clamp(20px,5vw,27px)!important}
+ .hero:has(.grooming-hero-art) p{font-size:12px!important}
+ .hero:has(.grooming-hero-art) .grooming-hero-art img{height:165px!important;transform:translateY(-7px)!important}
+ .grooming-panel .booking-fields{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+ .grooming-panel .booking-fields .field label{display:block!important}
+}
