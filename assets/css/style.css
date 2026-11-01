@@ -858,3 +858,21 @@ body.bzh-zoom-open{overflow:hidden!important}
 @media(max-width:900px){
  .bzh-admin-delivery-tables>.tablewrap:nth-child(2) thead{display:none!important}
 }
+
+/* Admin overview: scoped KPI cards, desktop and PWA */
+.bzh-summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:stretch}
+.bzh-summary-card{min-width:0;width:100%;border:1px solid #f0dfd1;border-radius:17px;background:#fff;padding:19px 17px;display:flex;flex-direction:column;gap:12px;text-align:left;color:#252525;font:inherit;cursor:pointer;box-shadow:0 4px 16px #8a4b0a09;transition:box-shadow .2s,border-color .2s,transform .2s}
+.bzh-summary-card:hover,.bzh-summary-card:focus-visible{border-color:#ff8a31;box-shadow:0 8px 24px #ed740019;transform:translateY(-2px)}
+.bzh-summary-top{display:flex;align-items:center;justify-content:space-between;gap:6px;font-weight:750;font-size:14px;line-height:1.35}
+.bzh-summary-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#fff0e2;color:#ec6800;font-size:23px;flex-shrink:0}
+.bzh-summary-number{font-size:clamp(30px,3.1vw,43px);font-weight:850;line-height:1.1;letter-spacing:-1px;font-variant-numeric:tabular-nums;color:#e76500}
+.bzh-summary-users .bzh-summary-number{color:#356fc5}.bzh-summary-orders .bzh-summary-number{color:#a66300}.bzh-summary-bookings .bzh-summary-number{color:#167e72}
+.bzh-summary-subtitle{color:#81766e;font-size:12px;margin-top:auto}
+.bzh-summary-statuses{display:flex;flex-direction:column;gap:10px;border-top:1px solid #f0e9e3;padding-top:13px;margin-top:auto}
+.bzh-summary-status{display:grid;grid-template-columns:8px minmax(0,1fr) auto;gap:7px;align-items:center;font-size:12px;line-height:1.3}
+.bzh-summary-status b{font-variant-numeric:tabular-nums;font-size:13px}
+.bzh-summary-dot{width:8px;height:8px;border-radius:50%;background:#e8a12b}
+.bzh-summary-status-0 .bzh-summary-dot{background:#e8a12b}.bzh-summary-status-1 .bzh-summary-dot{background:#3386d6}.bzh-summary-status-2 .bzh-summary-dot{background:#169c65}.bzh-summary-status-3 .bzh-summary-dot{background:#d85454}
+.bzh-summary-status-0 b{color:#b27a13}.bzh-summary-status-1 b{color:#2775bd}.bzh-summary-status-2 b{color:#168655}.bzh-summary-status-3 b{color:#c44848}
+@media(max-width:900px){.bzh-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.bzh-summary-card{padding:14px 12px}.bzh-summary-top{font-size:13px}.bzh-summary-number{font-size:34px}}
+@media(max-width:360px){.bzh-summary-card{padding:12px 9px}.bzh-summary-top{font-size:12px}.bzh-summary-status{font-size:11px;gap:5px}.bzh-summary-icon{width:26px;height:26px;font-size:19px}}
