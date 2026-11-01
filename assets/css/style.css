@@ -824,3 +824,26 @@ body.bzh-zoom-open{overflow:hidden!important}
 @media(max-width:600px){#productForm .bzh-admin-image-actions{max-width:100%;gap:8px}
 #productForm .bzh-admin-image-actions #bzhOpenCamera{padding-inline:10px}
 #productForm .bzh-admin-image-actions .bzh-file-label{padding:8px;gap:5px;font-size:12px}}
+
+/* 2026-11-01: Scoped admin form/list improvements */
+#productForm .bzh-admin-save-actions{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin:-47px 0 17px;padding-right:0;min-height:39px}
+#productForm .bzh-admin-image-field{padding-right:245px;min-height:105px}
+.bzh-admin-list-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:18px;margin-bottom:12px}
+.bzh-admin-list-heading h3{margin:0}.bzh-admin-list-heading input{width:min(100%,320px);min-width:0;padding:9px 12px;border:1px solid var(--border);border-radius:10px}
+.bzh-admin-product-list table{min-width:0;table-layout:auto;width:100%}.bzh-admin-product-list th,.bzh-admin-product-list td{padding:9px 6px;font-size:12px;vertical-align:middle}
+.bzh-admin-product-list th:first-child,.bzh-admin-product-list td:first-child{width:54px}
+.bzh-admin-thumb{width:46px;height:46px;object-fit:cover;border-radius:8px;display:block;background:#fff7ef}.bzh-no-thumb{display:grid;place-items:center}
+.bzh-admin-product-name{min-width:150px;max-width:270px}.bzh-admin-product-name a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere;color:var(--ink);font-weight:800}
+.bzh-admin-product-name a:hover{text-decoration:underline;color:var(--orange)}
+.bzh-admin-row-actions{display:flex;flex-wrap:nowrap;gap:4px;white-space:nowrap}.bzh-admin-row-actions .btn{padding:7px 8px;font-size:11px}
+.bzh-admin-no-results{padding:16px;text-align:center;color:var(--muted)}
+.bzh-admin-delivery-tables{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:18px}
+.bzh-admin-delivery-tables table{min-width:0}.bzh-admin-delivery-tables th,.bzh-admin-delivery-tables td{padding:11px 9px}
+#deliveryForm .bzh-admin-delivery-row>.btn{width:100%;padding-inline:12px}
+@media(max-width:900px){.adminnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;gap:6px;padding-bottom:5px}.adminnav button{flex:0 0 auto;white-space:nowrap}
+#productForm .bzh-admin-image-field{padding-right:0;min-height:0}#productForm .bzh-admin-save-actions{margin:12px 0 17px;justify-content:center}
+.bzh-admin-product-list{overflow-x:auto}.bzh-admin-product-list table{min-width:780px}.bzh-admin-product-list th,.bzh-admin-product-list td{font-size:11px;padding:7px 5px}
+.bzh-admin-product-list .bzh-admin-product-name{min-width:135px;max-width:165px}.bzh-admin-row-actions .btn{padding:7px 6px}
+.bzh-admin-delivery-tables{grid-template-columns:1fr;gap:0}.bzh-admin-delivery-tables table{min-width:0;width:100%;table-layout:fixed}.bzh-admin-delivery-tables th,.bzh-admin-delivery-tables td{font-size:12px;padding:9px 5px}
+.bzh-admin-delivery-tables th:last-child,.bzh-admin-delivery-tables td:last-child{width:90px}}
+@media(max-width:600px){.bzh-admin-list-heading{flex-direction:column;align-items:stretch}.bzh-admin-list-heading input{width:100%}.bzh-admin-delivery-tables th:last-child,.bzh-admin-delivery-tables td:last-child{width:83px}}
