@@ -847,3 +847,14 @@ body.bzh-zoom-open{overflow:hidden!important}
 .bzh-admin-delivery-tables{grid-template-columns:1fr;gap:0}.bzh-admin-delivery-tables table{min-width:0;width:100%;table-layout:fixed}.bzh-admin-delivery-tables th,.bzh-admin-delivery-tables td{font-size:12px;padding:9px 5px}
 .bzh-admin-delivery-tables th:last-child,.bzh-admin-delivery-tables td:last-child{width:90px}}
 @media(max-width:600px){.bzh-admin-list-heading{flex-direction:column;align-items:stretch}.bzh-admin-list-heading input{width:100%}.bzh-admin-delivery-tables th:last-child,.bzh-admin-delivery-tables td:last-child{width:83px}}
+
+/* 2026-11-01: Two requested admin visual fixes only. */
+@media(min-width:901px){
+ #productForm.bzh-admin-product-form{display:grid!important;grid-template-columns:minmax(0,1fr) 245px!important;column-gap:12px!important;align-items:end!important}
+ #productForm .bzh-admin-product-fields,#productForm .bzh-admin-description{grid-column:1/-1!important}
+ #productForm .bzh-admin-image-field{grid-column:1!important;grid-row:auto!important;padding-right:0!important;min-height:0!important;margin-bottom:0!important}
+ #productForm .bzh-admin-save-actions{grid-column:2!important;grid-row:auto!important;display:flex!important;align-self:center!important;justify-content:flex-end!important;gap:8px!important;margin:0!important;padding:0!important;min-height:0!important}
+}
+@media(max-width:900px){
+ .bzh-admin-delivery-tables>.tablewrap:nth-child(2) thead{display:none!important}
+}
