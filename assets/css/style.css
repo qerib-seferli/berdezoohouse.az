@@ -793,3 +793,7 @@ body.bzh-zoom-open{overflow:hidden!important}
 @media(max-width:700px){.bzh-status-control{min-width:145px}.bzh-overview-card{padding:12px}.bzh-new-badge{font-size:10px}}
 
 #adminBody .bzh-status-control select{appearance:auto!important;-webkit-appearance:menulist!important;background:transparent!important;color:inherit!important}
+
+/* Cancellation window: visible, server-enforced status lock */
+.bzh-countdown{color:#cf202b!important;font-weight:800!important}
+.bzh-status-control select:disabled{opacity:.65;cursor:not-allowed!important}
